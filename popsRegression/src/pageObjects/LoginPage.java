@@ -11,7 +11,7 @@ public class LoginPage {
 	 
 	    element = driver.findElement(By.xpath("//a[@href='https://www.popssoftware.com/sign-up'][text()='Sign Up']"));
 	 
-	    return element;//commit
+	    return element;//commit and push
 	 
 	    }
 	 

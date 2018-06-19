@@ -20,11 +20,7 @@ public class LoginModule {
 	
   @Test
   public void sn_1() {
-	  driver.get(Constant.URL);
-	  LoginPage.signInButton(driver).click();
-	  LoginPage.email(driver).sendKeys(Constant.Username);
-	  LoginPage.password(driver).sendKeys(Constant.Password);
-	  LoginPage.loginButton(driver).click();
+	
 	  String hpl=HomePage.hpl(driver).getText();
 	  Assert.assertEquals(hpl, "HPL");
   }
@@ -39,7 +35,11 @@ public class LoginModule {
 		driver.manage().timeouts().pageLoadTimeout(100, TimeUnit.SECONDS);
 		driver.manage().timeouts().setScriptTimeout(100,TimeUnit.SECONDS);
 		driver.manage().window().maximize();
- 
+		  driver.get(Constant.URL);
+		  LoginPage.signInButton(driver).click();
+		  LoginPage.email(driver).sendKeys(Constant.Username);
+		  LoginPage.password(driver).sendKeys(Constant.Password);
+		  LoginPage.loginButton(driver).click();
   }
 
   @AfterMethod

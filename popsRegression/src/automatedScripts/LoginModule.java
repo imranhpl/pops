@@ -23,6 +23,8 @@ public class LoginModule {
 	
 	  String hpl=HomePage.hpl(driver).getText();
 	  Assert.assertEquals(hpl, "HPL");
+	  HomePage.logoutDropDown(driver).click();
+	  HomePage.logoutButton(driver).click();
   }
   @BeforeMethod
   public void beforeMethod() {

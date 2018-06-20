@@ -30,4 +30,20 @@ public class HomePage {
 		    return element;//commit and push
 		 
 		    }
+	 
+	 public static WebElement contact(WebDriver driver){
+		 
+		    element = driver.findElement(By.xpath("//span[text()='Contacts']"));
+		 
+		    return element;//commit and push
+		 
+		    }
+	 public static WebElement addContact(WebDriver driver){
+		 
+		    element = driver.findElement(By.xpath("//a[@href='https://www.popssoftware.com/contacts/create'][@target='_blank']"));
+		 
+		    return element;//commit and push
+		 
+		    }
+	 
 }

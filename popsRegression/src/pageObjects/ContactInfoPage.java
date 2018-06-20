@@ -84,5 +84,12 @@ public class ContactInfoPage {
 		 
 		    }
 	 
+	 public static WebElement contactAdditional(WebDriver driver){
+		 
+		    element = driver.findElement(By.xpath("//span//i[@class='fa fa-check-square-o fa-btn fa-submit']"));
+		 
+		    return element;//commit and push
+		 
+		    }
 	 
 }

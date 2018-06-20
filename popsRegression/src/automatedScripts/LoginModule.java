@@ -2,23 +2,27 @@ package automatedScripts;
 
 import org.testng.annotations.Test;
 
+import pageObjects.ContactInfoPage;
 import pageObjects.HomePage;
 import pageObjects.LoginPage;
 import utility.Constant;
 
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Parameters;
 
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 
 public class LoginModule {
 	public WebDriver driver;
 	
-  @Test
+  @Test(enabled = false)
   public void sn_1() {
 	
 	  String hpl=HomePage.hpl(driver).getText();
@@ -46,7 +50,36 @@ public class LoginModule {
 
   @AfterMethod
   public void afterMethod() {
-	  driver.quit();
+	  //driver.quit();
 	  }
 
-}
+ 
+  
+  @Test
+  @Parameters({ "email"})	 
+  public void u_1(String email){
+	  
+	  HomePage.contact(driver).click();
+	  HomePage.addContact(driver).click();
+	  
+	  for (String handle : driver.getWindowHandles()) {
+		  
+		    driver.switchTo().window(handle);
+	  }
+
+Select oSelect = new Select(ContactInfoPage.categoryType(driver));
+ 
+oSelect.selectByVisibleText("Customer");
+ContactInfoPage.firstName(driver).sendKeys("Firstname_Test");
+ContactInfoPage.lastName(driver).sendKeys("Lastname_Test");
+ContactInfoPage.email(driver).sendKeys(email);
+ 
+Select oSelect1 = new Select(ContactInfoPage.numberType(driver));
+oSelect1.selectByVisibleText("Home");
+ContactInfoPage.saveAndNext(driver).click();
+ContactInfoPage.contactAdditional(driver).click();
+
+	  }
+  }
+  
+

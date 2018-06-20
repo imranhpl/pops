@@ -5,8 +5,8 @@
     <classes>
       <class name="automatedScripts.LoginModule">
         <methods>
+          <include name="u_1"/>
           <include name="afterMethod"/>
-          <include name="sn_1"/>
           <include name="beforeMethod"/>
         </methods>
       </class> <!-- automatedScripts.LoginModule -->

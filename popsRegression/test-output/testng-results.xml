@@ -1,24 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="1" ignored="1" total="2" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="47780" started-at="2018-06-20T11:04:36Z" finished-at="2018-06-20T11:05:24Z">
+  <suite name="Default suite" duration-ms="19" started-at="2018-06-20T14:22:27Z" finished-at="2018-06-20T14:22:27Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="47780" started-at="2018-06-20T11:04:36Z" finished-at="2018-06-20T11:05:24Z">
+    <test name="Default test" duration-ms="19" started-at="2018-06-20T14:22:27Z" finished-at="2018-06-20T14:22:27Z">
       <class name="automatedScripts.LoginModule">
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:automatedScripts.LoginModule@7a9273a8]" name="beforeMethod" is-config="true" duration-ms="46378" started-at="2018-06-20T11:04:36Z" finished-at="2018-06-20T11:05:23Z">
+        <test-method status="FAIL" signature="u_1(java.lang.String)[pri:0, instance:automatedScripts.LoginModule@4abdb505]" name="u_1" duration-ms="0" started-at="2018-06-20T14:22:27Z" finished-at="2018-06-20T14:22:27Z">
+          <exception class="org.testng.TestNGException">
+            <message>
+              <![CDATA[
+Parameter 'email' is required by @Test on method u_1 but has not been marked @Optional or defined
+in C:\Users\Imran\AppData\Local\Temp\testng-eclipse--1605800527\testng-customsuite.xml]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.TestNGException: 
+Parameter 'email' is required by @Test on method u_1 but has not been marked @Optional or defined
+in C:\Users\Imran\AppData\Local\Temp\testng-eclipse--1605800527\testng-customsuite.xml
+at org.testng.internal.Parameters.createParams(Parameters.java:290)
+at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:359)
+at org.testng.internal.Parameters.createParameters(Parameters.java:620)
+at org.testng.internal.Parameters.handleParameters(Parameters.java:769)
+at org.testng.internal.ParameterHandler.handleParameters(ParameterHandler.java:49)
+at org.testng.internal.ParameterHandler.createParameters(ParameterHandler.java:37)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:923)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.TestNGException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="sn_1()[pri:0, instance:automatedScripts.LoginModule@7a9273a8]" name="sn_1" duration-ms="71" started-at="2018-06-20T11:05:23Z" finished-at="2018-06-20T11:05:23Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- sn_1 -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:automatedScripts.LoginModule@7a9273a8]" name="afterMethod" is-config="true" duration-ms="1305" started-at="2018-06-20T11:05:23Z" finished-at="2018-06-20T11:05:24Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
+        </test-method> <!-- u_1 -->
       </class> <!-- automatedScripts.LoginModule -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
